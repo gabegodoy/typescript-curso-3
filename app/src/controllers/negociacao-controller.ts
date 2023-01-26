@@ -28,6 +28,7 @@ export class NegociacaoController {
     @inspect
     @logarTempoDeExecucao()
     public adiciona(): void {
+        const t1 = performance.now();
         /*
             Zé, você já viu isso?
         */
@@ -47,6 +48,9 @@ export class NegociacaoController {
         imprimir(negociacao, this.negociacoes);
         this.limparFormulario();
         this.atualizaView();
+        const t2 = performance.now();
+        console.log(`Tempo de execução do método adiciona: ${(t2-t1)/1000} segundos`);
+        
     }
 
     public importaDados(): void {

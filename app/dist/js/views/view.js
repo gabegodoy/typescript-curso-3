@@ -9,8 +9,11 @@ export class View {
         }
     }
     update(model) {
+        const t1 = performance.now();
         let template = this.template(model);
         this.elemento.innerHTML = template;
+        const t2 = performance.now();
+        console.log(`Tempo de execu��o do m�todo update: ${(t2 - t1) / 1000} segundos`);
     }
 }
 //# sourceMappingURL=view.js.map
