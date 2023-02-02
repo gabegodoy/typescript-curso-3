@@ -1,4 +1,4 @@
 export interface NegociacoesDoDia {
-    montante: number;
+    montante : number;
     vezes: number;
 }
